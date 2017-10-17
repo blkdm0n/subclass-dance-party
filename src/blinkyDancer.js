@@ -8,8 +8,8 @@ makeBlinkyDancer.prototype.constructor = makeBlinkyDancer;
 
 makeBlinkyDancer.prototype.step = function() {
   
-  var oldStep = makeDancer.prototype.step.call(this);
-  
+  makeDancer.prototype.step.call(this);
+  //var context = this;
   this.$node.toggle();
 };
 

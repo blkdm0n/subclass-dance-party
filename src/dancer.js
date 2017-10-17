@@ -8,26 +8,26 @@ var makeDancer = function(top, left, timeBetweenSteps) {
   this.top = top;
   this.left = left;
   this.timeBetweenSteps = timeBetweenSteps;
-  // this.step(); doesn't work
+  this.step();
+  this.setPosition(top, left);
 };
 
 //step()
 
 makeDancer.prototype.step = function() {
   //debugger;
-  var context = this;
-  setTimeout(function() { this.step.call(context); }, this.timeBetweenSteps);
+  //var context = this;
+  setTimeout(this.step.bind(this), this.timeBetweenSteps);
   //this.step() max call stack
 };
  
 
-makeDancer.prototype.setPosition = function() {
+makeDancer.prototype.setPosition = function(top, left) {
   var styleSettings = {
-    top: this.top,
-    left: this.left
+    top: top,
+    left: left
   };
   this.$node.css(styleSettings);
-  this.setPosition();
 };
 
 //var dance = new makeDancer(10, 11, 1000);
