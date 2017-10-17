@@ -8,6 +8,8 @@ var makeDancer = function(top, left, timeBetweenSteps) {
   this.top = top;
   this.left = left;
   this.timeBetweenSteps = timeBetweenSteps;
+  
+  //invoke methods in the object
   this.step();
   this.setPosition(top, left);
 };
@@ -16,9 +18,8 @@ var makeDancer = function(top, left, timeBetweenSteps) {
 
 makeDancer.prototype.step = function() {
   //debugger;
-  //var context = this;
+  var context = this;
   setTimeout(this.step.bind(this), this.timeBetweenSteps);
-  //this.step() max call stack
 };
  
 
@@ -29,12 +30,6 @@ makeDancer.prototype.setPosition = function(top, left) {
   };
   this.$node.css(styleSettings);
 };
-
-//var dance = new makeDancer(10, 11, 1000);
-
-//console.log(dance);
-
-
 
 
   // dancer.step = function() {

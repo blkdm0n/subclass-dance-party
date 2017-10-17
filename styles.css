@@ -25,3 +25,15 @@ body, a:link, a:visited, a:active{
   border-radius:10px;
   position:absolute;
 }
+
+.marcus{
+  border:10px solid yellow;
+  border-radius: 0px;
+  position:absolute;
+}
+
+.fred{
+  border: 20px solid orange;
+  border-radius: 0px;
+  position:absolute;
+}
