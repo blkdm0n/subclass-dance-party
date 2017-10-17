@@ -32,6 +32,14 @@ makeDancer.prototype.setPosition = function(top, left) {
 };
 
 
+makeDancer.prototype.lineUp = function(dancers) {
+  var position = 30;
+  for (var i = 0; i < dancers.length; i++) {
+    dancers[i].$node.css({top: $('body').height() / 2, left: position});
+    position += 170;
+  }
+};
+
   // dancer.step = function() {
   //   // the basic dancer doesn't do anything interesting at all on each step,
   //   // it just schedules the next step

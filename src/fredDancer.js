@@ -1,6 +1,7 @@
 var fredDancer = function (top, left, timeBetweenSteps) {
   makeDancer.call(this, top, left, timeBetweenSteps);
   this.$node.addClass('fred');
+  this.$node.prepend('<img src="michaeljackson.gif" height="250" width="350">');
 };
 
 fredDancer.prototype = Object.create(makeDancer.prototype);
