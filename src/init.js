@@ -47,4 +47,11 @@ $(document).ready(function() {
   //debugger;
     $(this).removeAttr('id', 'spin');
   });
+
+  //Use offset() to implement the closeness of each element using the Pythagorean Theorem
+    //Mathabs(top1 -top2)^2 + Mathabs(left1 - left2)^2 = distance of the element
+    //Implement a nested for loop to test which one is closest?
+  
+
+
 });
